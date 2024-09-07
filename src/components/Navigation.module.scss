@@ -1,0 +1,70 @@
+@import "../styles/variables.scss";
+.navigation {
+  position: absolute;
+  width: 100px;
+  height: 500px;
+  right: 20px;
+  top: 50%;
+  transform: translate(0px, -270px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: $prime-color;
+  border-radius: 15px;
+  transition: 0.4s all;
+  @media screen and (max-width: 48em) {
+    display: none;
+  }
+  &:hover {
+    width: 200px;
+  }
+  &:hover .menu {
+    display: block;
+    display: flex;
+    align-items: center;
+  }
+  &__icons__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+  }
+  &__icon {
+    color: $header-color;
+    font-size: 2rem;
+  }
+  &:hover &__icons__container {
+    display: none;
+  }
+}
+.menu {
+  position: relative;
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  margin: auto;
+
+  a {
+    text-decoration: none;
+    color: $header-color;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+    margin: auto;
+    padding: 0;
+  }
+  &__item {
+    list-style-type: none;
+  }
+}
+img {
+  width: 35px;
+}

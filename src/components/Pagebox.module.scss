@@ -1,0 +1,66 @@
+@import "../styles/variables.scss";
+
+.box {
+  width: 50%;
+  margin: 50px auto 0;
+  height: 350px;
+  border-radius: 15px;
+  background: $prime-color;
+  direction: rtl;
+  overflow: scroll;
+  @media screen and (max-width: 48em) {
+    width: 95%;
+    margin-bottom: 20px;
+  }
+  &__button__container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1px;
+    @media screen and (min-width: 48em) {
+      position: relative;
+    }
+  }
+  &__button__toggler {
+    color: lightcyan;
+    background: $prime-color;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 1px;
+    width: auto;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+  }
+  &__button__toggler__active {
+    color: $prime-color;
+    background: $header-color;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 1px;
+    width: auto;
+    cursor: pointer;
+    transition: 0.2s all;
+    padding: 10px;
+    border: none;
+  }
+  &__item__comtainer {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    color: $header-color;
+    text-align: right;
+
+    p {
+      color: $text-color;
+      font-size: 1.2rem;
+    }
+  }
+  &__item {
+    display: none;
+  }
+  &__item__active {
+    display: block;
+    margin: 30px auto;
+    height: 50%;
+  }
+}

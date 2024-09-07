@@ -1,0 +1,16 @@
+@import "./variables.scss";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $ubuntu-font;
+}
+body {
+  background: darkgray;
+  height: auto;
+}
+::-webkit-scrollbar {
+  display: none;
+}

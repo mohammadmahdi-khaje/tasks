@@ -1,0 +1,17 @@
+@import "../styles/variables.scss";
+
+.footer {
+  background: $prime-color;
+  width: 100%;
+  height: 91px;
+  color: white;
+  display: flex;
+  margin-top: 90px;
+  &__container {
+    color: white;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,121 @@
+@import "../styles/variables.scss";
+
+.container {
+  max-width: 700px;
+  height: 100vh;
+  display: flex;
+  direction: rtl;
+
+  @media screen and (min-width: 48em) {
+    margin: auto;
+  }
+  &__box {
+    background: $prime-color;
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0 7px 40px 2px black;
+    flex-direction: column;
+  }
+}
+.register {
+  width: 100%;
+  height: 80%;
+  display: block;
+  &--active {
+    display: none;
+  }
+  &__textbox__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  &__textbox {
+    width: 70%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background: transparent;
+    border: 2px solid $header-color;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  &__checkbox__container {
+    width: 70%;
+    margin: 0 auto;
+    color: $header-color;
+    display: flex;
+    align-items: center;
+  }
+  &__checkbox {
+    margin-left: 5px;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.login {
+  width: 100%;
+  height: 80%;
+  display: block;
+  &--active {
+    display: none;
+  }
+  &__textbox__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  &__textbox {
+    width: 70%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+    background: transparent;
+    border: 2px solid $header-color;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  &__checkbox__container {
+    width: 70%;
+    margin: 0 auto;
+    color: $header-color;
+    display: flex;
+    align-items: center;
+  }
+  &__checkbox {
+    margin-left: 5px;
+    height: 20px;
+    width: 20px;
+  }
+  &__button__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+button {
+  background: rgb(199, 130, 27);
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  justify-content: center;
+  width: 120px;
+  height: 44px;
+  font-size: 1rem;
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}

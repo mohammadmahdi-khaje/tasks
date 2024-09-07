@@ -1,0 +1,33 @@
+@import "../styles/variables.scss";
+.container {
+  width: 50%;
+  height: 150px;
+  background: $prime-color;
+  margin: 10px auto;
+  border-radius: 15px;
+  padding: 10px;
+  @media screen and (max-width: 48em) {
+    width: 95%;
+  }
+}
+.table {
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 5px;
+  color: black;
+  background: $header-color;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+td:nth-child(even) {
+  background-color: white;
+}
+td:nth-child(odd) {
+  background-color: gray;
+}

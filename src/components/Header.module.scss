@@ -1,0 +1,159 @@
+@import "../styles/variables.scss";
+
+.header {
+  background: $prime-color;
+  color: white;
+  width: 100%;
+  height: 60px;
+  position: static;
+  z-index: 1000;
+
+  &__content {
+    margin: 0 auto;
+    padding: 0 16px;
+    @media screen and (min-width: 48em) {
+      padding: 0 32px;
+    }
+    transition: 0.3s all;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    & > div {
+      flex: 1;
+      white-space: nowrap;
+    }
+    &:nth-child(2) {
+      display: flex;
+      justify-content: flex-end;
+      height: 100%;
+    }
+    &:last-of-type {
+      display: flex;
+      justify-content: flex-start;
+      flex: 0;
+    }
+  }
+  &__button__toggler {
+    font-weight: bold;
+    color: cyan;
+    background: $prime-color;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+    width: fit-content;
+    @media screen and (min-width: 48em) {
+      &:hover {
+        color: $header-color;
+      }
+    }
+  }
+
+  &__button__container {
+    display: none;
+    @media screen and (min-width: 48em) {
+      display: initial;
+    }
+  }
+  &__toggler {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    @media screen and (min-width: 48em) {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  &__logoIcon {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+}
+.nav {
+  z-index: 100;
+  width: 100%;
+  position: fixed;
+  justify-content: space-evenly;
+  top: 60px;
+  right: -100%;
+  background: rgb(59, 59, 59);
+  text-align: center;
+  padding: 16px 0;
+
+  &--open {
+    transition: 0.5s ease;
+    right: 0;
+  }
+  &__item {
+    display: block;
+    padding: 16px;
+    width: fit-content;
+    text-decoration: none;
+    color: inherit;
+    margin: auto;
+    height: 100%;
+    transition: 0.3s ease;
+    &:hover {
+      color: $text-color;
+      font-weight: bold;
+    }
+  }
+  @media screen and (min-width: 48em) {
+    position: static;
+    display: flex;
+    align-items: center;
+    background: inherit;
+    width: auto;
+    padding: 0;
+
+    &__item {
+      display: block;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+    }
+  }
+  &__button__container {
+    @media screen and (min-width: 48em) {
+      display: none;
+    }
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.button {
+  font-weight: bold;
+  color: $prime-color;
+  background: $header-color;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  @media screen and (max-width: 43em) {
+    background: transparent;
+    border: 3px solid $header-color;
+    width: fit-content;
+    color: $header-color;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
